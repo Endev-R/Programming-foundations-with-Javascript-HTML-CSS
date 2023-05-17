@@ -1,0 +1,45 @@
+body {
+    /*Background color: Initial*/
+    background-color: rgb(151, 40, 255);
+    font-family: 'Courier New', Courier, monospace;
+    color: azure;
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+    font-style: bold;
+}
+
+#kawai {
+    color: rgb(255, 22, 22);
+    background-color: azure;
+}
+
+#special-table {
+    padding: 1em;
+    background-color: rgb(173, 147, 197);
+}
+
+img {
+    width: 400px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+
+table img {
+    width: 200px;
+}
+
+a p {
+    text-align: center;
+    color: rgb(252, 242, 196);
+}
