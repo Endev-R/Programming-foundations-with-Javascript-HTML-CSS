@@ -67,6 +67,42 @@ function pixelARGB(wooow_an_imagePath) {
 
 //making the function functionality available for each selected image
 imagePaths.forEach(function(wooow_an_imagePath)
-{pixelARGB(wooow_an_imagePath)});
+{sumRGBpixel(wooow_an_imagePath)});
 //this function displays the ARGB values of a given pixel in an image, or multiple images
+
+var imagePaths = ['./media/Chisatooo-0.jpg', './media/nh_d15_1_10.jpg'];
+
+function sumRGBpixel(wooow_an_imagePath) {
+    var imuiiig = new Image();
+    imuiiig.onload = function() {
+        //creating a canvas
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+
+        //setting the dimentions of the canvas (it should have the same width and height of the image)
+        canvas.width = imuiiig.width;
+        canvas.height = imuiiig.height;
+
+        //drawing the image on the canvas
+        context.drawImage(imuiiig, 0, 0);
+
+        //getting the pixel data from the canvas
+        var pixelData = context.getImageData(10, 10, 1, 1).data;
+        var red = pixelData[0];
+        var green = pixelData[1];
+        var blue = pixelData[2];
+
+        //sum of the pixel values
+        var sumpixelRGB = red + green + blue;
+
+        //output 
+        console.log('Image: ' + wooow_an_imagePath + '\n' + 'The SUM of the RGB values of the pixel: ' + sumpixelRGB);
+    };
+    imuiiig.src = wooow_an_imagePath;
+}
+
+//making the function functionality available for each selected image
+imagePaths.forEach(function(wooow_an_imagePath)
+{pixelARGB(wooow_an_imagePath)});
+//this function displays the sum (addition) of the RGB values of a given pixel in an image, or multiple images
 
