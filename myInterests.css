@@ -16,6 +16,7 @@ h1 {
 #kawai {
     color: rgb(255, 22, 22);
     background-color: azure;
+    text-decoration: underline;
 }
 
 #special-table {
